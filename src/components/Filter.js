@@ -24,7 +24,7 @@ searchCall(){
     
   }else{
     this.setState({                       //user key not found
-                    result:"not found...",
+                    result:"NOT FOUND",
                     data :this.props.data
                 });
     

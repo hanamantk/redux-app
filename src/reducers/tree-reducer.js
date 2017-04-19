@@ -23,10 +23,12 @@ var data = {
         }
 
 export default (state = data, action) => {
+
   switch (action.type) {
-    case types.ADD_PERSON:
-      return state;
-    default:
-      return state;
+                    case types.ADD_PERSON:
+                      return state;
+                    default:
+                      return state;
   }
+  
 };

@@ -42,13 +42,15 @@ parseChild(objTree){   //recursive fun for getting child node
 	  		
 	  		let objTree = this.props.data;
 	  		if(this.props.result!==""){
-	  			this.result="NOT FOUND......";
-	  		let objTree = this.props.data.tree[0].node;
- 			var li=this.parseChild(objTree);
 	  			
+					this.result="NOT FOUND......";
+					let objTree = this.props.data.tree[0].node;
+					var li=this.parseChild(objTree);
+					this.color='red';	
 	  		}else{										/*serach value found*/				
 	  			var li=this.parseChild(objTree);
-	  		
+	  			this.result="RESULT FOUND......";
+	  			this.color='green';	
 	  		}
  			
 
@@ -60,7 +62,7 @@ parseChild(objTree){   //recursive fun for getting child node
 		 <ul id="list">
 		    {this.list}
 		  </ul>   
-		 <div className="result"> {this.result}</div>  
+		 <div className="result" style={{color:this.color}}> {this.result}</div>  
     </div>
     );
   }
